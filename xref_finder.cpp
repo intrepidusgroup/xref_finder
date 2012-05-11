@@ -8,7 +8,6 @@
 #include <string.h>
 #include "pin.H"
 
-
 // trace log
 FILE * trace;
 
@@ -23,6 +22,10 @@ VOID RecordCall(VOID * ip, VOID * addr)
 
     if (calls.count(keyedpair) == 0)
     {
+        // Efficiency note: while it would be more efficient to write out
+        // the contents of the "calls" set when the program executes (in the
+        // Fini() function), we take a hit to reliability. If the application
+        // terminates unexpectedly, we might not get our log output.
         fprintf(trace,"%s\n", keyedpair);
         calls.insert(keyedpair);
     }

@@ -148,7 +148,8 @@ def parse_lines(call_list):
     return stats
 
 
-
+# if you decide to change the extension of the output file in the Pin tool, be sure
+# to update the call to AskFile() below.
 input_file = AskFile(0, "*.out", "Select icalltrace input log")
 f = open(input_file, 'rb')
 
