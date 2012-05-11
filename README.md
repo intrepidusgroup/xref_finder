@@ -23,7 +23,9 @@ IDAPython could be further utilized to do a lot more interesting things.
 Pre-requisites
 -----------
 These tools are designed for use with IDA Pro. You'll also need IDAPython
-and Pin.
+and Pin. For testing, I compiled the tool using Visual Studio 2010, but 
+you shouldn't have [much of] a problem using some other compiler on some 
+other operating system.
 
 Building the Pin tool
 -----------
