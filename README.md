@@ -2,8 +2,11 @@ xref_finder
 ===========
 xref_finder is a pair of tools that can be used for adding cross-references
 into an IDA Pro database that can't be identified using strictly static 
-analysis, such as virtual calls (i.e. call eax). The idea was inspired by
-Portnoy's writeup on scripting the creation of xrefs using IDAPython 
+analysis, such as virtual calls (i.e. `call eax`). Using Pin to do the 
+heavy lifting gives huge performance gains over a debugger. As a by-product
+of adding new cross-references, it's likely that IDA may auto-identify
+new functions as well. The idea was inspired byPortnoy's writeup on 
+scripting the creation of xrefs using IDAPython 
 (http://dvlabs.tippingpoint.com/blog/2012/02/23/adding-xrefs-via-idapy).
 
 The first, xref_finder, is a Pin tool, which must be compiled and executed
